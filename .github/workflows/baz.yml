@@ -10,6 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Sleep
+        run: sleep 30
+
       - name: Print params
         run: |
           echo "sha: ${{ github.sha }}"

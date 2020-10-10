@@ -10,9 +10,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Print params
-        run: |
-          echo "sha: ${{ github.sha }}"
-          echo "ref: ${{ github.ref }}"
-          echo "date: ${{ github.event.client_payload.date}}"
-          echo "val: ${{ github.event.client_payload.val}}"
+      - name: Sleep
+        run: sleep 30
+
+      - name: Fail
+        run:
+          exit 1
